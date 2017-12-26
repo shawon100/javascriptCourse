@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Callback2</title>
+  </head>
+  <body>
+    <div id='id'></div>
+    <script type="text/javascript">
+
+      function eat(food1,food2,callback)
+      {
+         document.getElementById('id').innerHTML="Started eating "+food1+" and "+food2;
+         callback();
+      }
+
+      eat('burger','chicken',function(){
+          alert('Eating finished');
+      });
+    </script>
+  </body>
+</html>

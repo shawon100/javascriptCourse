@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Image</title>
+  </head>
+  <body>
+    <img src="ch.PNG" id="im" width="200px" height="200px" alt="">
+    <br><br><input type="button" onclick="change()" value="Click">
+    <script type="text/javascript">
+    var i=1;
+    function change()
+    {
+       if(i%2==0)
+       {
+         document.getElementById('im').src="ch.PNG";
+       }
+       else
+       {
+         document.getElementById('im').src="g.PNG";
+       }
+
+       i++;
+    }
+
+    </script>
+  </body>
+</html>

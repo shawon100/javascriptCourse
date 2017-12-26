@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Timeout</title>
+  </head>
+  <body>
+    <div id='div'></div>
+    <input type="button" onclick="timeout()" value="Start"/>
+    <script type="text/javascript">
+
+
+        function afterTimeout()
+        {
+            document.getElementById('div').innerHTML="Exam Finished";
+        }
+
+        function timeout()
+        {
+          setTimeout("afterTimeout()",3000);
+           document.getElementById('div').innerHTML="Exam is running...."
+        }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<input type="text" id="in1" name="in"><br>
+<input type="text" id="in2" name="in"><br>
+<input type="button" onclick="add()" value="Result">
+
+
+
+<script>
+
+
+
+
+function add()
+{
+	var a=document.getElementById('in1').value;
+    var b=document.getElementById('in2').value;
+	var c=parseInt(a)+parseInt(b);
+	document.getElementById('out').innerHTML=c;
+}
+
+</script>
+
+<p id="out"></p>
+
+</body>
+</html>

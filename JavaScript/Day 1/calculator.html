@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<p id='p'></p>
+<p id='q'></p>
+<p id='r'></p>
+
+<div class="container">
+<div class="row">
+<div class="col-sm-2">
+</div>
+<div class="col-sm-8">
+<form action="" name="calculator">
+
+<input type="text" size="60px" name="screen" id="i"><br><br>
+
+
+<input type="button" class="btn btn-success"  id="b0" value="0" onclick="calculator.screen.value+='0'">
+<input type="button" class="btn btn-success"  id="b1" value="1" onclick="calculator.screen.value+='1'">
+<input type="button"  class="btn btn-success" id="b2" value="2" onclick="calculator.screen.value+='2'">
+<input type="button"  class="btn btn-success" id="b3" value="3" onclick="calculator.screen.value+='3'">
+<input type="button"  class="btn btn-success" id="b4" value="4" onclick="calculator.screen.value+='4'">
+<input type="button"  class="btn btn-success" id="b5" value="5" onclick="calculator.screen.value+='5'"><br>
+<input type="button"   class="btn btn-success" id="b6" value="6" onclick="calculator.screen.value+='6'">
+<input type="button"  class="btn btn-success" id="b7" value="7" onclick="calculator.screen.value+='7'">
+<input type="button" class="btn btn-success" id="b8" value="8" onclick="calculator.screen.value+='8'">
+<input type="button" class="btn btn-success" id="b9" value="9" onclick="calculator.screen.value+='9'">
+<input type="button" class="btn btn-success" id="b10" value="+" onclick="calculator.screen.value+='+'">
+<input type="button" class="btn btn-success" id="b11" value="-" onclick="calculator.screen.value+='-'"><br>
+<input type="button" class="btn btn-success" id="b12" value="*" onclick="calculator.screen.value+='*'">
+<input type="button" class="btn btn-success" id="b13" value="/" onclick="calculator.screen.value+='/'">
+<input type="button" class="btn btn-success" id="b14" value="=" onclick="calculator.screen.value=eval(calculator.screen.value)">
+<input type="button" class="btn btn-success" id="b15" value="C" onclick="calculator.screen.value=''">
+</form>
+</div>
+<div class="col-sm-2">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Component</title>
+  </head>
+  <body>
+    <input type="text" id="in" name="in" value=""><br>
+    <input type="button" name="" onclick="generate()" value="Click">
+
+    <form id="fm">
+      <p id="i0"></p>
+      <p id="i1"></p>
+      <p id="i2"></p>
+      <p id="i3"></p>
+      <p id="i4"></p>
+      <p id="i5"></p>
+      <p id="i6"></p>
+      <p id="i7"></p>
+      <p id="i8"></p>
+      <p id="i9"></p>
+
+    </form>
+
+    <input type="button" onclick="print()" value="Click" />
+
+
+    <script type="text/javascript">
+
+      function generate()
+      {
+        var i,s;
+         var n=document.getElementById('in').value;
+         for(i=0;i<n;i++)
+         {
+            document.getElementById('i'+i).innerHTML="<input type=\"text\" id=\"in\""+i+"/>";
+         }
+      }
+
+      function print()
+      {
+          var j,text="";
+          var x=document.getElementById("fm");
+          for(j=0;j<x.length;j++)
+          {
+             text=text+x.elements[j].value+"<br>";
+          }
+
+          document.getElementById('demo').innerHTML=text;
+      }
+
+
+    </script>
+
+    <div id="demo"></div>
+
+  </body>
+</html>

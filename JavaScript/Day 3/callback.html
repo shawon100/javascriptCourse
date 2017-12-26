@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Callback</title>
+  </head>
+  <body>
+    <div id="id1"></div><br>
+    <div id="id2"></div><br>
+    <div id="id3"></div><br>
+    <div id="id4"></div><br>
+    <div id="id5"></div><br>
+    <div id="id6"></div><br>
+    <script type="text/javascript">
+      document.getElementById('id1').innerHTML='user 1  has submitted. Process is In Queue....';
+      setTimeout(function(){
+             callback(1);
+      }, 5000);
+      document.getElementById('id2').innerHTML='user 2  has submitted. Process is In Queue....';
+      setTimeout(function(){
+             callback(2);
+      }, 2000);
+      document.getElementById('id3').innerHTML='user 3  has submitted. Process is In Queue....';
+      setTimeout(function(){
+             callback(3);
+      }, 3000);
+
+      var i=3;
+      function callback(data)
+      {
+        i++;
+        document.getElementById('id'+i).innerHTML='User '+data+' Query is processed';
+      }
+    </script>
+  </body>
+</html>

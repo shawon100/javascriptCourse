@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Change Value</title>
+  </head>
+  <body>
+    <div class="div">Undefined</div>
+    <div class="div">checking</div>
+    <input type="button" onclick="present()" value="Present"/>
+      <input type="button" onclick="absent()" value="Absent"/>
+    <script type="text/javascript">
+        function present()
+        {
+           var x=document.getElementsByClassName('div');
+           x[0].innerHTML="Present";
+           x[1].innerHTML="Present";
+        }
+
+        function absent()
+        {
+           var x=document.getElementsByClassName('div');
+           x[0].innerHTML="Absent";
+           x[1].innerHTML="Absent";
+        }
+    </script>
+  </body>
+</html>
