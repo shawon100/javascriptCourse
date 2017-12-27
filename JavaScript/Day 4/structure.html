@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Structure</title>
+</head>
+<body>
+<input type="text" id='n0'  name="">
+<input type="text" id='m0' name="">
+<input type="text" id='n1' name="">
+<input type="text" id='m1' name="">
+<input type="text" id='n2' name="">
+<input type="text" id='m2' name="">
+<input type="button" value="Submit" onclick="result()">
+
+<script type="text/javascript">
+	
+function result()
+{
+	var b=new Array(100);
+	var n1=document.getElementById('n0').value;
+	var m1=document.getElementById('m0').value;
+	var n2=document.getElementById('n1').value;
+	var m2=document.getElementById('m1').value;
+	var n3=document.getElementById('n2').value;
+	var m3=document.getElementById('m2').value;
+
+
+	
+
+	var a=new Array(100);
+	var b=new Array(100);
+	var n,m,j,i,temp,t;
+
+    for(i=0;i<3;i++)
+    {
+
+        n=document.getElementById('n'+i).value;
+        m=document.getElementById('m'+i).value;
+        m=parseInt(m);
+    	a[i]={name:n,mark:m};
+    }
+
+    for(i=0;i<3;i++)
+    {
+ 
+      for(j=i+1;j<3;j++)
+      {
+    	if(a[j].mark>a[i].mark)
+    	{
+             temp=a[i].mark;
+             t=a[i].name;
+             a[i].mark=a[j].mark;
+             a[i].name=a[j].name;
+             a[j].mark=temp;
+             a[j].name=t;
+
+             //console.log(a[i].name);
+    	     //console.log(a[i].mark);
+
+    	}
+      }
+    }
+
+    for(i=0;i<3;i++)
+    {
+ 
+    	console.log(a[i].name);
+    	console.log(a[i].mark);
+    }
+
+
+}
+
+</script>
+</body>
+</html>
